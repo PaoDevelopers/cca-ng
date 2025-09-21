@@ -1,0 +1,10 @@
+[database]
+url = "postgres:///cca-ng?host=/var/run/postgresql"
+
+[server]
+address = ":8080"
+static_dir = "frontend/dist"
+session_name = "cca_session"
+
+[schema]
+version = 1

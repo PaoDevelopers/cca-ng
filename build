@@ -1,0 +1,23 @@
+#!/bin/sh
+set -ex
+
+echo "Building frontend..."
+cd frontend
+npm install
+mkdir -p dist/
+cp src/index.html dist/index.html
+npm run build
+cd ..
+
+echo "Building sqlc files..."
+if command -v sqlc >/dev/null 2>&1; then
+	sqlc generate
+else
+	/home/runner/go/bin/sqlc generate
+fi
+
+echo "Building backend..."
+go generate ./...
+go build -o cca-ng .
+
+echo "Build complete."

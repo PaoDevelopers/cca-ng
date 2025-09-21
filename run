@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+
+# Check if binary exists
+if [ ! -f "./cca-ng" ]; then
+	echo "Binary not found. Run ./build first."
+	exit 1
+fi
+
+# Run with default config if no args provided
+if [ $# -eq 0 ]; then
+	exec ./cca-ng -config config.sample.toml
+else
+	exec ./cca-ng "$@"
+fi

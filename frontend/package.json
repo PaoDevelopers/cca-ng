@@ -1,0 +1,17 @@
+{
+	"name": "cca-ng-frontend",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"build": "node build.js",
+		"dev": "node build.js --watch",
+		"type-check": "tsc --noEmit",
+		"lint": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"esbuild": "^0.20.2",
+		"esbuild-svelte": "^0.8.2",
+		"svelte": "^5.0.0",
+		"typescript": "^5.5.4"
+	}
+}

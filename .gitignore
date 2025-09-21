@@ -1,0 +1,13 @@
+/cca-ng
+
+/frontend/dist/
+/frontend/node_modules/
+
+/config.toml
+/config.agent.toml
+
+/queries.sql.go
+/models.go
+/copyfrom.go
+/db.go
+
